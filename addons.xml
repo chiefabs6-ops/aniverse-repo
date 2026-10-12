@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.video.aniverse" name="AniVerse" version="1.2.0" provider-name="AniVerse">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1"/>
+    <import addon="script.module.pyqrcode" version="1.2.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_GB">Personal anime add-on with TorBox or Real-Debrid playback</summary>
+    <description lang="en_GB">Browse anime, choose a source yourself and play it through your own TorBox (or Real-Debrid) account. For personal use.</description>
+    <platform>all</platform>
+    <license>Personal use</license>
+    <news>1.2.0: MyAnimeList tracking — log in with your phone (Settings → MyAnimeList → MyAnimeList account); AniVerse shows your MyAnimeList progress and updates it while you watch.</news>
+    <assets>
+      <icon>aniverse-icon.png</icon>
+      <fanart>fanart.png</fanart>
+    </assets>
+  </extension>
+</addon>
 <addon id="plugin.video.aniverse" name="AniVerse" version="1.1.0" provider-name="AniVerse">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
@@ -38,28 +60,6 @@
     <platform>all</platform>
     <license>Personal use</license>
     <news>1.0.1: fixes One Piece and other long-running shows failing to open on Fire TV (dub date hint). 1.0.0: context menu adds "Choose a different source" and "Related &amp; sequels".</news>
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.png</fanart>
-    </assets>
-  </extension>
-</addon>
-<addon id="plugin.video.aniverse" name="AniVerse" version="1.0.0" provider-name="AniVerse">
-  <requires>
-    <import addon="xbmc.python" version="3.0.1"/>
-    <import addon="script.module.pyqrcode" version="1.2.1"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py"/>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en_GB">Personal anime add-on with TorBox or Real-Debrid playback</summary>
-    <description lang="en_GB">Browse anime, choose a source yourself and play it through your own TorBox (or Real-Debrid) account. For personal use.</description>
-    <platform>all</platform>
-    <license>Personal use</license>
-    <news>1.0.0: first full release. Context menu adds "Choose a different source" and "Related &amp; sequels".</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>
