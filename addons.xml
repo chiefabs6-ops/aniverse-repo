@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="plugin.video.aniverse" name="AniVerse" version="1.4.0" provider-name="AniVerse">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1"/>
+    <import addon="script.module.pyqrcode" version="1.2.1"/>
+    <import addon="script.aniverse" version="1.0.0"/>
+  </requires>
+  <!-- No <provides>: the Video add-ons tile is script.aniverse, which opens AniVerse without Kodi's
+       folder screen. plugin:// links (playback, widgets, classic lists) work as before. -->
+  <extension point="xbmc.python.pluginsource" library="default.py"/>
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_GB">Personal anime add-on with TorBox or Real-Debrid playback</summary>
+    <description lang="en_GB">Browse anime, choose a source yourself and play it through your own TorBox (or Real-Debrid) account. For personal use.</description>
+    <platform>all</platform>
+    <license>Personal use</license>
+    <news>1.4.0: Cleaner sidebar with a collapsible Explore group; My TorBox moved into Settings. New My Anime List page with status cards and counts. Continue Watching only lists shows you have started and shows whether the next episode is available, dub only, upcoming or not available (also in the MyAnimeList lists). Add to or remove from MyAnimeList in the long-press menu. 1.3.1: AniVerse opens straight away from Video add-ons, without Kodi's folder screen first. 1.3.0: Related &amp; sequels shows the whole franchise in rows — every sequel and prequel season, side stories, OVAs &amp; specials and movies, oldest first.</news>
+    <assets>
+      <icon>aniverse-icon.png</icon>
+      <fanart>fanart.png</fanart>
+    </assets>
+  </extension>
+</addon>
 <addon id="plugin.video.aniverse" name="AniVerse" version="1.3.1" provider-name="AniVerse">
   <requires>
     <import addon="xbmc.python" version="3.0.1"/>
@@ -39,28 +62,6 @@
     <platform>all</platform>
     <license>Personal use</license>
     <news>1.2.0: MyAnimeList tracking — log in with your phone (Settings → MyAnimeList → MyAnimeList account); AniVerse shows your MyAnimeList progress and updates it while you watch.</news>
-    <assets>
-      <icon>aniverse-icon.png</icon>
-      <fanart>fanart.png</fanart>
-    </assets>
-  </extension>
-</addon>
-<addon id="plugin.video.aniverse" name="AniVerse" version="1.1.0" provider-name="AniVerse">
-  <requires>
-    <import addon="xbmc.python" version="3.0.1"/>
-    <import addon="script.module.pyqrcode" version="1.2.1"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py"/>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en_GB">Personal anime add-on with TorBox or Real-Debrid playback</summary>
-    <description lang="en_GB">Browse anime, choose a source yourself and play it through your own TorBox (or Real-Debrid) account. For personal use.</description>
-    <platform>all</platform>
-    <license>Personal use</license>
-    <news>1.1.0: new AniVerse look — sidebar, cinematic home, poster rows, new show page and source list. Turn off in Settings → General → AniVerse look to use Kodi's lists.</news>
     <assets>
       <icon>aniverse-icon.png</icon>
       <fanart>fanart.png</fanart>
